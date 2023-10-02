@@ -1,4 +1,4 @@
-export function ExerciseShow(props) {
+export function RoutinesNew(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -7,14 +7,8 @@ export function ExerciseShow(props) {
   };
 
   return (
-    <div>
-      <h1>{props.exercise.name}</h1>
-      <p>{props.exercise.id}</p>
-      <p>Description: {props.exercise.description}</p>
-      <a href={props.exercise.video_url}>Exercise Video Tutorial</a>
-      <br/>
-
-      <h1>Add exercise to routine</h1>
+  <div>
+    <h1>Add exercise to routine</h1>
     <form onSubmit={handleSubmit}>
     <div>
       User_Id: <input name="user_id" type="text" />
@@ -30,6 +24,6 @@ export function ExerciseShow(props) {
     </div>
     <button type="submit">Add to routine</button>
     </form>
-    </div>
+  </div>
   );
 }

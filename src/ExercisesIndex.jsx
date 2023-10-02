@@ -7,7 +7,8 @@ export function ExercisesIndex(props) {
           <h2>{exercise.name}</h2>
           <img src={exercise.image_url} width={250} height={250} />
         <br/>
-        <button onClick={() => props.onShowExercise(exercise)}>More info</button>
+        <button onClick={() => props.onShowExercise(exercise)}>Exercise info</button>
+        <hr/>
           </div>
       ))}
     </div>
