@@ -16,9 +16,9 @@ export function ExerciseShow(props) {
 
       <h1>Add exercise to routine</h1>
     <form onSubmit={handleSubmit}>
-    <div>
+    {/* <div>
       User_Id: <input name="user_id" type="text" />
-    </div>
+    </div> */}
     <div>
       Sets: <input name="sets" type="text"/>
     </div>

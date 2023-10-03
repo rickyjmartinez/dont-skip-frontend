@@ -55,6 +55,7 @@ export function Content() {
     axios.post("http://localhost:3000/routines.json", params).then((response) => {
     setRoutines([...routines,response.data]);
     successCallback();
+    handleClose();
     });
   };
 
@@ -94,14 +95,13 @@ export function Content() {
     <div>
       <Routes>
         <Route path="/myroutine" element={<RoutinesIndex routines={routines} onShowRoutine={handleShowRoutine}/>}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={<Signup /> }/>
+        <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>}/>
       </Routes>
-      <Signup /> 
-      <Login />
-      < br/> 
       <LogoutLink />
       {/* <RoutinesNew onCreateRoutine={handleCreateRoutine}/> could add form back on main page if user wants to add manually */}
       
-      <ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>
       <Modal show={isExerciseShowVisible} onClose={handleClose}>
        <ExerciseShow exercise ={currentExercise} onCreateRoutine={handleCreateRoutine}/> 
       </Modal>
