@@ -1,6 +1,6 @@
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 import { Signup } from "./Signup"; 
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
@@ -79,25 +79,34 @@ export function Content() {
         })
       );
       successCallback();
-      handleClose(); 
+      handleRoutineClose(); 
     })
   }
- 
+
+  const handleDestroyRoutine = (routine) => {
+    axios.delete(`http://localhost:3000/routines/${routine.id}.json`).then((response) => {
+      setRoutines(routines.filter((r) => r.id !== routine.id));
+      handleRoutineClose();
+    });
+  };
 
   return (
     <div>
+      <Routes>
+        <Route path="/myroutine" element={<RoutinesIndex routines={routines} onShowRoutine={handleShowRoutine}/>}/>
+      </Routes>
       <Signup /> 
       <Login />
       < br/> 
       <LogoutLink />
       {/* <RoutinesNew onCreateRoutine={handleCreateRoutine}/> could add form back on main page if user wants to add manually */}
-      <RoutinesIndex routines={routines} onShowRoutine={handleShowRoutine}/>
+      
       <ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>
       <Modal show={isExerciseShowVisible} onClose={handleClose}>
        <ExerciseShow exercise ={currentExercise} onCreateRoutine={handleCreateRoutine}/> 
       </Modal>
       <RoutineModal show={isRoutineShowVisible} onClose={handleRoutineClose}>
-        <RoutinesShow routine={currentRoutine} onUpdateRoutine={handleUpdateRoutine} /> 
+        <RoutinesShow routine={currentRoutine} onUpdateRoutine={handleUpdateRoutine} onDestroyRoutine={handleDestroyRoutine} /> 
       </RoutineModal>
     </div>
   )

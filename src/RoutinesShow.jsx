@@ -14,6 +14,10 @@ export function RoutinesShow(props) {
     });
   };
 
+  const handleClick = () => {
+    props.onDestroyRoutine(props.routine);
+  }; 
+
   return (
     <div>
       <h1>Routine Information</h1>
@@ -30,6 +34,7 @@ export function RoutinesShow(props) {
         </div>
         <button type="submit">Update routine</button>
       </form>
+      <button onClick={handleClick}>Remove exercise from routine</button>
     </div>
   );
 }
