@@ -20,13 +20,13 @@ export function ExerciseShow(props) {
       User_Id: <input name="user_id" type="text" />
     </div>
     <div>
-      Exercise_ID: <input name="exercise_id" type="text" />
-    </div>
-    <div>
       Sets: <input name="sets" type="text"/>
     </div>
     <div>
       Reps: <input name="reps" type="text" />
+    </div>
+    <div>
+      <input name="exercise_id" type="hidden" defaultValue={props.exercise.id}/>
     </div>
     <button type="submit">Add to routine</button>
     </form>

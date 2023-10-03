@@ -1,26 +1,35 @@
+import React, { useState } from 'react';
+
 export function RoutinesShow(props) {
+  const [sets, setSets] = useState(props.routine.sets);
+  const [reps, setReps] = useState(props.routine.reps);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onUpdateRoutine(props.routine.id, params, () => event.target.reset());
-  }
-    return (
+    props.onUpdateRoutine(props.routine.id, params, () => {
+      event.target.reset();
+      setSets(params.get('sets'));
+      setReps(params.get('reps'));
+    });
+  };
+
+  return (
     <div>
       <h1>Routine Information</h1>
       <p>Exercise_name: {props.routine.exercise_name}</p>
-      <p>Sets:{props.routine.sets}</p>
-      <p>Reps:{props.routine.reps}</p>
-      <br/>
+      <p>Sets: {sets}</p>
+      <p>Reps: {reps}</p>
+      <br />
       <form onSubmit={handleSubmit}>
         <div>
-          Sets: <input defaultValue={props.routine.sets} name="sets" type="text" /> 
+          Sets: <input value={sets} name="sets" type="text" onChange={(event) => setSets(event.target.value)} />
         </div>
         <div>
-          Reps: <input defaultValue={props.routine.reps} name="reps" type="text" /> 
+          Reps: <input value={reps} name="reps" type="text" onChange={(event) => setReps(event.target.value)} />
         </div>
         <button type="submit">Update routine</button>
       </form>
     </div>
-  )
+  );
 }
