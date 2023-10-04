@@ -5,7 +5,12 @@ export function ExercisesIndex(props) {
   return (
     <div>
       <h1>All Exercises</h1>
-      <input type="text" value={searchFilter} onChange={event => setSearchFilter(event.target.value)} placeholder="search execises"/>
+      <input type="text" value={searchFilter} onChange={event => setSearchFilter(event.target.value)} placeholder="search execises" list="exercises"/>
+      <datalist id="exercises">
+      {props.exercises.map(exercise => (
+        <option>{exercise.name}</option>
+      ))}
+      </datalist>
       {/* {searchFilter} if you want to show what user is typing, not needed right now */}
       {props.exercises.filter(exercise => exercise.name.toLowerCase().includes(searchFilter.toLowerCase())).map((exercise)  => (
         <div key={exercise.id}>
