@@ -9,12 +9,11 @@ export function ExerciseShow(props) {
   return (
     <div>
       <h1>{props.exercise.name}</h1>
-      <p>{props.exercise.id}</p>
-      <p>Description: {props.exercise.description}</p>
+      <p>Further help:</p> 
       <a href={props.exercise.video_url}>Exercise Video Tutorial</a>
       <br/>
 
-      <h1>Add exercise to routine</h1>
+      <h1>Add sets and reps </h1>
     <form onSubmit={handleSubmit}>
     {/* <div>
       User_Id: <input name="user_id" type="text" />

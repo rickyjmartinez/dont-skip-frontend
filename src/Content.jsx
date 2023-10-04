@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Signup } from "./Signup"; 
 import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
 import { ExercisesIndex } from "./ExercisesIndex";
 import { Modal } from "./Modal"; 
 import { RoutineModal } from "./RoutineModal";
@@ -99,7 +98,7 @@ export function Content() {
         <Route path="/signup" element={<Signup /> }/>
         <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>}/>
       </Routes>
-      <LogoutLink />
+      
       {/* <RoutinesNew onCreateRoutine={handleCreateRoutine}/> could add form back on main page if user wants to add manually */}
       
       <Modal show={isExerciseShowVisible} onClose={handleClose}>
