@@ -7,7 +7,7 @@ export function RoutinesIndex(props) {
       {props.routines.map((routine) => (
         <div key={routine.id}>
           <h2>{routine.exercise_name}</h2>
-          <img src={routine.exercise_image_url} width={250} height={250} />
+          <img src={routine.exercise_image_url} width={300} height={300} />
           <p>{routine.exercise_description}</p>
           <br/>
           <p>Sets:{routine.sets}</p>
