@@ -8,7 +8,7 @@ export function ExercisesIndex(props) {
       <input type="text" value={searchFilter} onChange={event => setSearchFilter(event.target.value)} placeholder="search execises" list="exercises"/>
       <datalist id="exercises">
       {props.exercises.map(exercise => (
-        <option>{exercise.name}</option>
+        <option key={exercise.id}>{exercise.name}</option>
       ))}
       </datalist>
       {/* {searchFilter} if you want to show what user is typing, not needed right now */}
@@ -16,9 +16,8 @@ export function ExercisesIndex(props) {
         <div key={exercise.id}>
           <h2>{exercise.name}</h2>
           <img src={exercise.image_url} width={300} height={300} />
-          <p>{exercise.description}</p>
         <br/>
-        <button onClick={() => props.onShowExercise(exercise)}>Add exercise to routine</button>
+        <button onClick={() => props.onShowExercise(exercise)}>Exercise Info</button>
         <hr/>
           </div>
       ))}
