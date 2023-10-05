@@ -9,7 +9,7 @@ export function RoutinesIndex(props) {
           <h2>{routine.exercise_name}</h2>
           <img src={routine.exercise_image_url} width={300} height={300} />
           <p>{routine.exercise_description}</p>
-          <br/>
+          <h2>Current Sets & Reps</h2>
           <p>Sets:{routine.sets}</p>
           <p>Reps:{routine.reps}</p>
 

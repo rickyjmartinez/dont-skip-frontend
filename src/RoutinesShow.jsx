@@ -20,8 +20,7 @@ export function RoutinesShow(props) {
 
   return (
     <div>
-      <h1>Current Routine</h1>
-      <p>Exercise: {props.routine.exercise_name}</p>
+      <h1>{props.routine.exercise_name}</h1>
       <p>
         <strong>Number of Sets:</strong> {sets} {" "}
         <strong>Number of Reps:</strong> {reps}
@@ -29,10 +28,9 @@ export function RoutinesShow(props) {
       <br />
       <form onSubmit={handleSubmit}>
         <div>
-          Sets: <input value={sets} name="sets" type="text" onChange={(event) => setSets(event.target.value)} />
-        </div>
-        <div>
-          Reps: <input value={reps} name="reps" type="text" onChange={(event) => setReps(event.target.value)} />
+          New Sets: <input value={sets} name="sets" type="text" onChange={(event) => setSets(event.target.value)} /> {" "}
+      
+          New Reps: <input value={reps} name="reps" type="text" onChange={(event) => setReps(event.target.value)} />
         </div>
         <br/>
         <button type="submit">Update routine</button>
