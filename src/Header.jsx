@@ -1,5 +1,6 @@
 import {LogoutLink} from "./LogoutLink";
 
+
 export function Header() {
   let authenticationLinks;
 
@@ -19,7 +20,7 @@ export function Header() {
   return (
     <header>
       <nav>
-        <a href="/">Home</a> | {authenticationLinks}
+        <a href="/">Home</a> | {authenticationLinks} |   <a href="/additions">More Exercises</a> 
       </nav>
     </header>
   )
