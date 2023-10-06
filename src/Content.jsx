@@ -11,6 +11,8 @@ import { RoutinesIndex } from "./RoutinesIndex";
 import { RoutinesNew } from "./RoutinesNew"; 
 import { RoutinesShow } from "./RoutinesShow";
 
+import { AdditionsIndex } from "./AdditionsIndex";
+
 export function Content() {
   
   const [exercises, setExercises] = useState([]);
@@ -90,6 +92,7 @@ export function Content() {
     });
   };
 
+
   return (
     <div>
       <Routes>
@@ -97,6 +100,7 @@ export function Content() {
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup /> }/>
         <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>}/>
+        <Route path="/additions" element={<AdditionsIndex/>}/> 
       </Routes>
       
       {/* <RoutinesNew onCreateRoutine={handleCreateRoutine}/> could add form back on main page if user wants to add manually */}
