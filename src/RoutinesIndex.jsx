@@ -2,6 +2,7 @@
 export function RoutinesIndex(props) {
 
   return (
+    
     <div>
       <h1>My Routine</h1>
       {props.routines.map((routine) => (

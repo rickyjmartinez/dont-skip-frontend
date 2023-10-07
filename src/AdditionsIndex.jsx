@@ -21,6 +21,7 @@ export function AdditionsIndex() {
   return (
   
     <div>
+      <h1>Find your next challenge</h1>
       <br/>
       <form onSubmit={handleSubmit}>
       <label>
@@ -55,7 +56,8 @@ export function AdditionsIndex() {
       {additions.map(addition => ( 
         <div key={addition.name}>
           <h2>{addition.name}</h2>
-          <p><strong>Instructions:</strong>{addition.instructions}</p>
+          <p><strong>Equipment:</strong><br/>{addition.equipment}</p>
+          <p><strong>Instructions:</strong><br/>{addition.instructions}</p>
         </div>
       ))}
     </div>
