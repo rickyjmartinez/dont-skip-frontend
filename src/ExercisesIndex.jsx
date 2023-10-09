@@ -25,6 +25,8 @@ export function ExercisesIndex(props) {
         <a href="/signup" class="btn custom-btn bordered mt-3" data-aos="fade-up"
           data-aos-delay="700">Create an account</a>
 
+        <a href="/login" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Log in</a>
+
         
 
       </div>
