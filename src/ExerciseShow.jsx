@@ -12,7 +12,6 @@ export function ExerciseShow(props) {
   if (localStorage.jwt === undefined) {
     newExerciseForm = (
     <>
-    {/* want to just remove the form for not logged in users  */}
     </>
     )
   } else {
@@ -20,9 +19,6 @@ export function ExerciseShow(props) {
     <>
     <h1>Enter sets and reps </h1>
     <form onSubmit={handleSubmit}>
-      {/* <div>
-        User_Id: <input name="user_id" type="text" />
-      </div> */}
       <div>
         Sets: <input name="sets" type="text"/>
       </div>

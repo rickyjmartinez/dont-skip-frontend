@@ -8,11 +8,9 @@ import { Modal } from "./Modal";
 import { RoutineModal } from "./RoutineModal";
 import { ExerciseShow } from "./ExerciseShow";
 import { RoutinesIndex } from "./RoutinesIndex";
-import { RoutinesNew } from "./RoutinesNew"; 
 import { RoutinesShow } from "./RoutinesShow";
-
 import { AdditionsIndex } from "./AdditionsIndex";
-import { LogoutLink } from "./LogoutLink";
+
 
 export function Content() {
   
@@ -99,13 +97,11 @@ export function Content() {
       <Routes>
         <Route path="/myroutine" element={<RoutinesIndex routines={routines} onShowRoutine={handleShowRoutine}/>}/>
         <Route path="/login" element={<Login />}/>
-       
         <Route path="/signup" element={<Signup /> }/>
         <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>}/>
         <Route path="/additions" element={<AdditionsIndex/>}/> 
       </Routes>
       
-      {/* <RoutinesNew onCreateRoutine={handleCreateRoutine}/> could add form back on main page if user wants to add manually */}
       
       <Modal show={isExerciseShowVisible} onClose={handleClose}>
        <ExerciseShow exercise ={currentExercise} onCreateRoutine={handleCreateRoutine}/> 

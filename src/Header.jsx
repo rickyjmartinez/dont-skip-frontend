@@ -7,12 +7,9 @@ export function Header() {
   if (localStorage.jwt === undefined) {
     authenticationLinks = (
     <>
-
     <li class="nav-item">
       <a href="/signup" class="nav-link smoothScroll">Signup</a>
     </li>
-
-
      <li class="nav-item">
       <a href="/login" class="nav-link smoothScroll">Login</a>
     </li>
@@ -47,25 +44,14 @@ export function Header() {
         <ul class="navbar-nav ml-lg-auto">
           <li class="nav-item">
             <a href="/" class="nav-link smoothScroll">Home</a>
-          </li>
-
-               
-
-          
+          </li>         
           <li class="nav-item">
             <a href="/additions" class="nav-link smoothScroll">More Exercises</a>
-          </li>
-
-         
-          {authenticationLinks}  
-          
+          </li>      
+          {authenticationLinks}         
         </ul>
-
       </div>
-
     </div>
-  </nav>
-    
-    
+  </nav>   
   )
 }

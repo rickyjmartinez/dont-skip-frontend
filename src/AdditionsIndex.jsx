@@ -61,6 +61,5 @@ export function AdditionsIndex() {
         </div>
       ))}
     </div>
-
   )
 }   
