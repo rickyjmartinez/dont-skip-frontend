@@ -22,12 +22,12 @@ DontSkip offers a variety of features to help you achieve your fitness goals eff
 * Add your favorite leg exercises to your routine and adjust sets and reps to match your preferences.
 * Edit and remove exercises from your routine at any time to adapt to your evolving fitness needs.
 
-# Search for More Exercises
+## Search for More Exercises
 * Looking for even more leg exercises? Visit our "More Exercises" page.
 * Specify your desired muscle group and difficulty level as search criteria.
 * Our app will make a GET request to [API Ninjas exercise API](https://api-ninjas.com/api/exercises) using your choices as query parameters to fetch additional exercises for you.
 
-# Getting Started
+## Getting Started
 
 To get started with Don'tSkip, follow these steps:
 
@@ -51,6 +51,6 @@ npm run dev
 ```
 This command will start the development server, and you should be able to access the DontSkip application in your web browser at `http://localhost:5173`
 
-# Usage
+## Usage
 
 To use DontSkip to create routines, you will need to log in or register to access those features. Once logged in, you can still browse exercises but now have the ability to add exercises to your routine and see your routine on the 'My Routine' tab. 
