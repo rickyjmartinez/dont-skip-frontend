@@ -29,7 +29,7 @@ DontSkip offers a variety of features to help you achieve your fitness goals eff
 
 ## Getting Started
 
-To get started with Don'tSkip, follow these steps:
+To get started with DontSkip, follow these steps:
 
 1. Clone this repository to your local machine.
 ```
