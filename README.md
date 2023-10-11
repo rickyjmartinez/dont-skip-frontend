@@ -2,6 +2,11 @@
 
 Welcome to DontSkip, your go-to gym and fitness app for all things leg-focused exercises! Whether you're a fitness enthusiast or just starting your fitness journey, DontSkip is here to help you build stronger legs and not skip leg day. With our app, you can browse a wide range of leg exercises, create personalized routines, and take your leg workouts to the next level. For our backend, please refer to the [gym-fitness-api README](https://github.com/rickyjmartinez/gym-fitness-api)
 
+## Table of Contents
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+
 ## Features
 
 DontSkip offers a variety of features to help you achieve your fitness goals effectively:
@@ -46,6 +51,6 @@ npm run dev
 ```
 This command will start the development server, and you should be able to access the DontSkip application in your web browser at `http://localhost:5173`
 
-#Usage
+# Usage
 
 To use DontSkip to create routines, you will need to log in or register to access those features. Once logged in, you can still browse exercises but now have the ability to add exercises to your routine and see your routine on the 'My Routine' tab. 
